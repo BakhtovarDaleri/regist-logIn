@@ -84,7 +84,9 @@
                       placeholder="Пароль"
                       required
                     />
-                    <span class="toggle-password" onclick="togglePassword()"
+                    <span
+                      class="toggle-password"
+                      onclick="togglePassword(event)"
                       >👁</span
                     >
                     <p id="error-message" style="color: red; display: none">
@@ -151,9 +153,14 @@
                       placeholder="Пароль"
                       required
                     />
-                    <span class="toggle-password" onclick="togglePassword()"
+                    <span
+                      class="toggle-password"
+                      onclick="togglePassword(event)"
                       >👁</span
                     >
+                    <p class="error-message" style="color: red; display: none">
+                      Пароль должен содержать не менее 6 латинских букв.
+                    </p>
                   </div>
 
                   <button id="authBtn" type="submit" class="auth-btn">
@@ -164,12 +171,13 @@
                     Нет аккаунта?<a href="#"> Зарегистрироваться</a>
                   </p>
                 </form>
-              </div>
-              <div class="icons-container">
-                <img src="./img/visa.svg" alt="Visa" />
-                <img src="./img/master_card.svg" alt="Mastercard" />
-                <img src="./img/18+.svg" alt="18+" />
-                <img src="./img/verified.svg" alt="Secure" />
+
+                <div class="icons-container">
+                  <img src="./img/visa.svg" alt="Visa" />
+                  <img src="./img/master_card.svg" alt="Mastercard" />
+                  <img src="./img/18+.svg" alt="18+" />
+                  <img src="./img/verified.svg" alt="Secure" />
+                </div>
               </div>
             </div>
           </div>

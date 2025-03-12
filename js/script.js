@@ -1,4 +1,5 @@
 // Переключение между вкладками (Телефон / Email)
+
 function switchTab(tab) {
   console.log("Switching tab to:", tab);
 
@@ -40,16 +41,15 @@ function switchTab(tab) {
 }
 
 // Функция для отображения или скрытия пароля
-function togglePassword() {
-  const passwordField = document.getElementById("password");
-  const toggleIcon = document.querySelector(".toggle-password");
+function togglePassword(event) {
+  const passwordField = event.target.previousElementSibling; // Получаем инпут перед иконкой 👁
 
   if (passwordField.type === "password") {
     passwordField.type = "text";
-    toggleIcon.textContent = "👁"; // Глаз открыт
+    event.target.textContent = "👁"; // Глаз открыт
   } else {
     passwordField.type = "password";
-    toggleIcon.textContent = "👁"; // Глаз закрыт
+    event.target.textContent = "👁"; // Глаз закрыт
   }
 }
 
