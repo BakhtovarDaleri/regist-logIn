@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | LogIn</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="logSignUp">
+        <div class="logSignUp__wrapper">
+          <div class="logSignUp__container _container">
+            <!-- первый блок  -->
+
+            <div class="block">
+              <h1>Приветственный бонус</h1>
+              <div class="amount">
+                <span class="amount-before">до</span>
+                <span class="amount-value">30 000 ₽</span>
+              </div>
+              <div class="fs">+250 FS</div>
+              <div class="steps">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <p class="step-text">Зарегистрируйся</p>
+                </div>
+                <div class="divider"></div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <p class="step-text">Пополни баланс</p>
+                </div>
+                <div class="divider"></div>
+                <div class="step">
+                  <div class="step-number">3</div>
+                  <p class="step-text">Получи бонус</p>
+                </div>
+              </div>
+            </div>
+            <!-- первый блок  -->
+            <div class="container1">
+              <div class="block_form">
+                <h2>РЕГИСТРАЦИЯ</h2>
+
+                <div class="tabs">
+                  <div class="tab active" onclick="switchTab('phone')">
+                    Телефон
+                  </div>
+                  <div class="tab" onclick="switchTab('email')">E-mail</div>
+                </div>
+
+                <!-- Форма регистрации (по телефону или email) -->
+                <form id="registerForm">
+                  <div id="phoneSection" class="phone-wrapper">
+                    <select class="country-code">
+                      <option value="+7">🇷🇺 +7</option>
+                      <option value="+992">🇹🇯 +992</option>
+                      <option value="+1">🇺🇸 +1</option>
+                    </select>
+                    <input
+                      id="phone"
+                      type="text"
+                      class="phone-number"
+                      placeholder="Номер телефона"
+                      required
+                    />
+                  </div>
+
+                  <div id="emailSection" class="hidden">
+                    <input
+                      id="email"
+                      type="email"
+                      class="input-field"
+                      placeholder="E-mail"
+                      required
+                    />
+                  </div>
+
+                  <div class="password-container">
+                    <input
+                      type="password"
+                      id="password"
+                      class="input-field"
+                      placeholder="Пароль"
+                      required
+                    />
+                    <span class="toggle-password" onclick="togglePassword()"
+                      >👁</span
+                    >
+                    <p id="error-message" style="color: red; display: none">
+                      Пароль должен содержать не менее 6 латинских букв.
+                    </p>
+                  </div>
+
+                  <select class="input-field" id="currencySelect" required>
+                    <option value="" disabled selected>Выберите валюту</option>
+                    <option>Russian Ruble (RUB)</option>
+                    <option>US Dollar (USD)</option>
+                    <option>Euro (EUR)</option>
+                  </select>
+
+                  <button id="registerBtn" type="submit" class="register-btn">
+                    Зарегистрироваться
+                  </button>
+
+                  <p class="login-link">
+                    Уже есть аккаунт? <a href="#">Войти</a>
+                  </p>
+
+                  <div class="checkbox-container">
+                    <input type="checkbox" id="agreement" required />
+                    <label
+                      >Я согласен с <a href="#">Условиями и положениями</a> и
+                      мне 18+ лет.</label
+                    >
+                  </div>
+                </form>
+
+                <!-- Форма входа (по телефону или email) -->
+                <form id="authForm" class="hidden">
+                  <div id="authPhoneSection" class="phone-wrapper">
+                    <select class="country-code">
+                      <option value="+7">🇷🇺 +7</option>
+                      <option value="+992">🇹🇯 +992</option>
+                      <option value="+1">🇺🇸 +1</option>
+                    </select>
+                    <input
+                      id="authPhone"
+                      type="text"
+                      class="phone-number"
+                      placeholder="Номер телефона"
+                      required
+                    />
+                  </div>
+
+                  <div id="authEmailSection" class="hidden">
+                    <input
+                      id="authEmail"
+                      type="email"
+                      class="input-field"
+                      placeholder="E-mail"
+                      required
+                    />
+                  </div>
+
+                  <div class="password-container">
+                    <input
+                      type="password"
+                      id="authPassword"
+                      class="input-field"
+                      placeholder="Пароль"
+                      required
+                    />
+                    <span class="toggle-password" onclick="togglePassword()"
+                      >👁</span
+                    >
+                  </div>
+
+                  <button id="authBtn" type="submit" class="auth-btn">
+                    Войти
+                  </button>
+
+                  <p class="register-link">
+                    Нет аккаунта?<a href="#"> Зарегистрироваться</a>
+                  </p>
+                </form>
+              </div>
+              <div class="icons-container">
+                <img src="./img/visa.svg" alt="Visa" />
+                <img src="./img/master_card.svg" alt="Mastercard" />
+                <img src="./img/18+.svg" alt="18+" />
+                <img src="./img/verified.svg" alt="Secure" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
