@@ -168,6 +168,11 @@ h6 {
 
 /* Адаптивные стили для мобильных устройств */
 @media (max-width: 480px) {
+  .wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .logSignUp {
     height: 359px;
     background-size: 210% 100%;
@@ -238,7 +243,6 @@ h1 {
   font-weight: 800;
   margin-top: 8.87px;
 }
-
 .fs {
   font-size: 157px;
   font-weight: 800;
@@ -421,6 +425,7 @@ h2 {
     margin-top: 53%;
     left: 35px;
     padding: 20px;
+    margin-bottom: 0;
   }
   h2 {
     font-size: 20px;
@@ -503,7 +508,6 @@ h2 {
 .auth-btn:hover {
   background: linear-gradient(180deg, #e6c200 0%, #caa600 100%);
 }
-
 .login-link,
 .login-link a {
   margin-top: 16px;
@@ -548,7 +552,7 @@ h2 {
 }
 
 .checkbox-container input:checked::after {
-  content: "✔";
+  content: "✔️";
   color: black;
   font-size: 12px;
   position: absolute;
