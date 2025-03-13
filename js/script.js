@@ -98,14 +98,23 @@ function register(event) {
   if (activeTab === "Телефон") {
     phoneField.setAttribute("required", "true");
 
-    // Проверяем формат телефона
-    const phonePattern = /^[+7]\s?\(\d{3}\)\s?\d{3}-\d{2}-\d{2}$/; // Пример: +7 (123) 456-78-90
-    if (!phonePattern.test(phoneField.value)) {
+    // Получаем код страны
+    const countryCode = document.querySelector("select").value; // Или другой способ получения кода
+
+    // Добавляем код страны, если его нет в поле ввода
+    let fullPhoneNumber = phoneField.value.trim();
+    if (!fullPhoneNumber.startsWith("+")) {
+      fullPhoneNumber = countryCode + fullPhoneNumber;
+    }
+
+    // Регулярное выражение для проверки телефона
+    const phonePattern =
+      /^\+?\d{1,4}[\s-]?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
+
+    if (!phonePattern.test(fullPhoneNumber)) {
       alert("Пожалуйста, введите правильный номер телефона.");
       return;
     }
-  } else if (activeTab === "Email") {
-    emailField.setAttribute("required", "true");
   }
 
   // Проверяем валидность пароля
