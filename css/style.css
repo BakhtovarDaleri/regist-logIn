@@ -170,7 +170,7 @@ h6 {
 @media (max-width: 480px) {
   .logSignUp {
     height: 359px;
-    background-size: 100% 100%;
+    background-size: 210% 100%;
   }
 
   .logSignUp::before {
@@ -309,25 +309,25 @@ h1 {
   }
 
   h1 {
-    font-size: 16px; /* Уменьшаем размер заголовка для мобильных */
-    margin-bottom: 4px; /* Уменьшаем отступ снизу */
+    font-size: 16px;
+    margin-bottom: 4px;
   }
 
   .amount-before {
-    font-size: 15px; /* Уменьшаем размер текста */
+    font-size: 15px;
   }
 
   .amount-value {
-    font-size: 55px; /* Уменьшаем размер значения */
-    margin-top: 5px; /* Уменьшаем отступ сверху */
+    font-size: 55px;
+    margin-top: 5px;
   }
 
   .fs {
-    font-size: 73px; /* Уменьшаем размер шрифта для мобильных */
+    font-size: 73px;
   }
 
   .steps {
-    display: none; /* Скрываем шаги на мобильных */
+    display: none;
   }
 
   .block_form {
@@ -420,6 +420,7 @@ h2 {
   .block_form {
     margin-top: 53%;
     left: 35px;
+    padding: 20px;
   }
   h2 {
     font-size: 20px;
